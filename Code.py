@@ -23,7 +23,7 @@ import json
 # Choose the file to simulate (e.g., rain, storm)
 filename = "weather_rain.json"
 
-with open("simulated_weather_chandigarh.json", "r") as f:
+with open("data/simulated_weather_chandigarh.json", "r") as f:
     data = json.load(f)
 
 condition = data['weather'][0]['description']
@@ -58,10 +58,10 @@ model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 # STEP 3: Load 4 image paths from Colab
 image_paths = {
-    "Phase 1": "/content/phase1.png",
-    "Phase 2": "/content/phase2.png",
-    "Phase 3": "/content/phase3.png",
-    "Phase 4": "/content/phase4.png"
+    "Phase 1": "images/phase1.png",
+    "Phase 2": "images/phase2.png",
+    "Phase 3": "images/phase3.png",
+    "Phase 4": "images/phase4.png"
 }
 
 # STEP 4: Detect vehicles in each phase image
@@ -221,10 +221,10 @@ model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 # STEP 3: Load 4 image paths
 image_paths = {
-    "Phase 1": "/content/phase1.png",
-    "Phase 2": "/content/phase2.png",
-    "Phase 3": "/content/phase3.png",
-    "Phase 4": "/content/phase4.png"
+    "Phase 1": "images/phase1.png",
+    "Phase 2": "images/phase2.png",
+    "Phase 3": "images/phase3.png",
+    "Phase 4": "images/phase4.png"
 }
 
 # STEP 4: Detect vehicles and check for emergency vehicles
@@ -257,7 +257,7 @@ for phase, path in image_paths.items():
     print(f"{phase}: {vehicle_counts[phase]} vehicles")
 
 # STEP 5: Load weather
-with open("/content/simulated_weather_chandigarh.json", "r") as f:
+with open("data/simulated_weather_chandigarh.json", "r") as f:
     weather_data = json.load(f)
 
 condition = weather_data['weather'][0]['description'].lower()
