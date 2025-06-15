@@ -1,7 +1,8 @@
 streamlit
 torch
-Pillow
+torchvision
 easyocr
+opencv-python-headless
 matplotlib
-opencv-python
 numpy
+Pillow
