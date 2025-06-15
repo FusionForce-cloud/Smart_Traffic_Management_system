@@ -1,0 +1,7 @@
+streamlit
+torch
+Pillow
+easyocr
+matplotlib
+opencv-python
+numpy
